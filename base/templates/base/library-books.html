@@ -1,0 +1,82 @@
+{% extends 'base/library.html' %}
+
+{% load static %}
+{% block link %}
+    <link rel="stylesheet" href="{% static 'styles/library.css' %}">
+{% endblock %}
+
+{% block sidebar-content %}
+<div class="sidebar__list">
+    <ul>
+        <li>
+            <a href="/library/books/{{branch}}/{{sem}}" class="active">Books</a>
+        </li>
+
+        <li>
+            <a href="/library/pyqs/{{branch}}/{{sem}}" class="">PYQ</a>
+        </li>
+    </ul>
+</div>
+{% endblock %}
+
+{% block container %}
+
+<div class="container">
+    <div class="heading">
+        <em>Got {{ subjects|length }} result{% if subjects|length > 1 %}s{% endif %} :</em>
+    </div>
+    <div class="content">
+        <div class="div">
+            <div class="library__cards">
+
+                {% for subject in subjects %}
+                <div class="card">
+                    <h3>{{subject.name}}</h3>
+                    <p class="discription">{{subject.description}}</p>
+                    <ul class="links dn">
+                        Select a book :
+                        {% for link in subject.booklink_set.all %}
+                        <li>
+                            <a href="{{link.href}}">{{link.name}}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                    <a href="#" class="download__anchor">download</a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block script %}
+<script>
+    const download = document.querySelectorAll(".download__anchor");
+    const discription = document.querySelectorAll(".discription");
+    const links = document.querySelectorAll(".links");
+    let toggle = new Array(download.length).fill(0)
+  
+    console.log(download[0])
+    console.log(toggle);
+    download.forEach((element,index) => {
+        element.addEventListener('click',()=>{
+            if(toggle[index] === 0){
+                discription[index].classList.add("dn");
+                links[index].classList.remove("dn");
+                element.innerHTML = '<i class="fa fa-arrow-left"></i>';
+                toggle[index] = 1;
+            }
+            else{
+                discription[index].classList.remove("dn");
+                links[index].classList.add("dn");
+                element.innerHTML = "Download";
+                toggle[index] = 0;
+            }
+        })
+    });
+    
+
+</script>
+{% endblock %}
+        

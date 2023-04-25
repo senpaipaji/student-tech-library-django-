@@ -1,0 +1,42 @@
+{% extends 'main.html' %}
+
+{% load static %} {% block link %}
+<link rel="stylesheet" href="{% static 'styles/root.css' %}" />
+<link rel="stylesheet" href="{% static 'styles/courses.css' %}" />
+{% endblock %} {% block content %}
+<div class="container">
+  <div class="topics">
+    <h1>Select your interest!</h1>
+    <form action="">
+      <input type="text" placeholder="Search" autocomplete="off" name="q" />
+    </form>
+    <ul>
+      <li><a href="{% url 'courses' %}?q=">All</a></li>
+      {% for topic in topics %}
+      <li><a href="{% url 'courses' %}?q={{topic}}">{{topic}}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+  <hr />
+  <div class="results">
+    <p>
+      {% if results != None %}Found {{results}} results.. {% else %}Our top recommendations...{% endif %}
+    </p>
+  </div>
+  <div class="videos">
+    {% for video in videos %}
+    <div class="featured-course-container">
+      <div class="featured-course-video">
+        <a href="{{video.url}}">
+          <img src="{{video.thumbnail.url}}" alt="">
+        </a>
+      </div>
+      <div class="featured-course-content">
+        <h1>{{video.title}}</h1>
+        <p>{{video.description}}</p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

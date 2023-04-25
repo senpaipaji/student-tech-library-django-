@@ -1,0 +1,125 @@
+{% extends 'main.html' %}
+
+{% load static %}
+{% block link %}
+<link rel="stylesheet" href="{% static 'styles/home.css' %}">
+{% endblock %}
+
+
+{% block content %}
+
+<script>
+    AOS.init();
+</script>
+<section class="home">
+    <div class="home__container">
+        <div class="home__background">
+            <video id="myVedio" src="{% static 'binaries/background.mp4' %}" muted autoplay loop></video>
+        </div>
+        <div class="home__content">
+            <div class="home__heading">
+                <h1>Elevate your scores!</h1>
+            </div>
+            <div class="home__buttons">
+                <button class="home__button">Get Started!</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="about__container ">
+        <h1>About Us</h1>
+        <p>
+            Our website is dedicated to helping engineering students reach their full potential. We believe that education is the foundation for success, and that's why we've created a platform that makes learning more accessible and convenient than ever before. Our website is designed to be a one-stop-shop for engineering students, offering a wide range of resources, courses, and updates to help you stay informed, engaged, and inspired. Our goal is to provide you with the tools and support you need to succeed, whether you're just starting out in your studies or looking to take your career to the next level. We're passionate about education, and we're committed to making it easier for you to achieve your goals.
+        </p>
+    </div>
+</section>
+
+<section class="functionalities">
+
+    <div class="section__container" >
+        <div class="section__content right__section">
+            <h1>Access Limitless Resources</h1>
+            <p>
+                Whether you're a student, researcher, or just someone who loves to learn, our library section has
+                everything you need to excel in your studies and explore new ideas. With a friendly and knowledgeable
+                staff, comfortable study areas, and the latest technology, our library section is the ideal place to
+                discover, explore, and grow.
+            </p>
+            <div>
+                <form action="/library/home">
+                    <button type="submit" class="button-filled" id="library__anchor">Go to Libraries</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="section__container">
+        <div class="section__content left__section" >
+            <h1>Vast Course Catalog</h1>
+            <p>
+                Our course recommendation section offers personalized learning for coding languages, frameworks, and
+                libraries. We curate the best YouTube channels and videos, saving you time by providing top-quality
+                resources at your fingertips. Get started now and optimize your learning experience!
+            </p>
+            <div>
+                <form action="{% url 'courses' %}">
+                    <button type="submit" class="button-filled" id="library__anchor">Go to Courses</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="community">
+        <h1>Community</h1>
+        {% if request.user.is_authenticated %}
+        <h3>Welcome back {{request.user}}!</h3>
+        {% endif %}
+        <div class="display">
+            {% for comment in comments %}
+            <div class="post {% if comment.username == request.user %} right {% else %} left {% endif %} ">
+                <div class="post__header {% if comment.username == request.user %}right {% else %}left {% endif %} ">
+                    <div class="user">
+                        <p class="username"><i class="fa fa-user"></i> {{comment.username}}</p>
+                    </div>
+                    <p class="time"><i>{{comment.created|timesince}} ago</i></p>
+                </div>
+                <div class="post__main">
+                    <h3>{{comment.title}}</h3>
+                    <p>
+                        {{comment.message}}
+                    </p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="post__forms">
+            <h2>Create a Post!</h2>
+            {% if request.user.is_authenticated %}
+            
+            
+            <form method='POST' class="post__form">
+                {% csrf_token %}
+                <input type="text" name="title" placeholder="Title" class="input"><br>
+                <textarea name="message" id="#" cols=100" rows="5" placeholder="message" class="input"></textarea>
+                <br>
+                <button class="button-filled">Post <i class="fa fa-paper-plane"></i></button> 
+            </form>
+            {% else %}
+            <p class="not-logged-in">You must be <a href="{% url 'login' %}">logged in</a> to create a post!</p>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+<script>
+    const button = document.querySelector('.home__button');
+        console.log(button)
+        button.addEventListener('click', function() {
+            console.log("click")
+            const targetElement = document.querySelector('.about__container');
+            targetElement.scrollIntoView({behavior: 'smooth'});
+        });
+</script>
+{% endblock %}
+

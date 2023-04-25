@@ -1,0 +1,61 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'styles/login_register.css' %}" />
+<link rel="stylesheet" href="{% static 'styles/root.css' %}" />
+<div class="container">
+  {% if messages %}
+    <ul class="messages">
+      {% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}> <i class="fa-solid fa-bell"></i> {{ message }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+  {% if page == 'login' %}
+  <div class="form__container">
+    <h1>Please Login</h1>
+    <form method="POST">
+      {% csrf_token %}
+      <div class="form-control">
+        <input type="text" name="username" autocomplete="off" required id="" />
+        <label>Username</label>
+      </div>
+      <div class="form-control">
+        <input type="password" name="password" required id="" />
+        <label>Password</label>
+      </div>
+      <button class="form__btn">Login</button>
+      <p class="form-text">
+        Dont have an account? <a href="{% url 'register' %}">register</a>
+      </p>
+      <br />
+    </form>
+  </div>
+
+  {% else %}
+  <div class="form__container">
+    <h1>Please SignUp</h1>
+    <form method="POST">
+      {% csrf_token %}
+      <div class="form-control">
+        {{form.username}}
+        <label>Username</label>
+      </div>
+      <div class="form-control">
+        {{form.password1}}
+        <label>Password</label>
+      </div>
+      <div class="form-control">
+        {{form.password2}}
+        <label>Confirm Password</label>
+      </div>
+      <button class="form__btn">SignUp</button>
+      <p class="form-text">
+        Already have an account?<a href="{% url 'login' %}"> login </a>
+      </p>
+      <br />
+    </form>
+  </div>
+
+  {% endif %}
+
+  <script src="{% static 'scripts/login_register.js' %}"></script>
+</div>

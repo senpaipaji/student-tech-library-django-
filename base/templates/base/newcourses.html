@@ -1,0 +1,429 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *,*:after,*:before{
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -ms-box-sizing:border-box;
+            box-sizing: border-box;
+         }
+         body{
+            font-family: arial;
+            font-size: 20px;
+            margin: 0;
+            background: #0276ad;
+            background: #fff;
+            color: #222;
+         }
+         header{
+            background-color: #003046;
+            padding: 15px;
+            text-align: center;
+            color: #fff;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+         }
+         .container{
+            max-width: 1000px;
+            margin: 0 auto;
+         }
+         .tabs_nav{
+            background-color: #0572a5;
+         }
+         .tabs_nav.fixed{
+            position: fixed;
+            left: 0;
+            width: 100%;
+         }
+         .tabs_nav ul{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+         }
+         .tabs_nav ul li{
+            display: inline-block;
+         }
+         .tabs_nav ul li a{
+            color: #fff;
+            text-transform: uppercase;
+            padding: 15px;
+            display: block;
+            text-decoration: none;
+            font-size: 17px;
+            transition: all 0.3s ease-out;
+         }
+         .tabs_nav ul li:hover a,
+         .tabs_nav ul li.active a{
+            color: #0572a5;
+            background: #fff;
+         }
+         .scroll_section{
+            padding: 30px 0;
+         }
+
+
+         /*you tube*/
+         #course{
+            padding: 50px;
+            background-image: url(../images/course-bg.svg);
+            background-position: top;
+            background-repeat: repeat;
+            background-size: cover;
+        }
+        .featured-course-container{
+            display: flex;
+            padding: 50px 0px;
+        }
+        .featured-course-video{
+            flex: 2;
+            display: contents;
+            align-items: center;
+        }
+        .featured-course-video iframe{
+            width: 90%;
+            border-radius: 77px;
+            box-shadow: 0 0 8 #626262;
+        }
+        .featured-course-content{
+            flex: 2;
+        }
+        .gray{
+            color:   rgb(163 51 28);
+
+        }
+        .featured-course-title{
+            font-size: 1.8rem;
+            text-transform: capitalize;
+            color: #333333;
+        }
+        .featured-course-desc{
+            color: #333333;
+            margin: 10px 0px;
+            line-height: 25px;
+        }
+         .featured-course-icons-container{
+            margin: 30px 0px;
+        } 
+         .icons-row{
+            display: flex;
+            justify-content: flex-start;
+        }
+        .icon-heading{
+            flex: 4;
+            text-transform: uppercase;
+            font-size: 10px;
+            margin-bottom: 64px;
+            font-weight: 900;
+            color:#082cec;
+            letter-spacing: 1px;
+        }
+        body{
+            background-color: rgb(244, 244, 244);
+        }
+
+        /* slider bar*/
+         
+
+        
+        
+
+
+
+
+    </style>
+ </head>
+ <body>
+    <header>
+        <h1>slidebar</h1>
+        <section class="home">
+             
+      </section>
+    </header>
+    <div class="header_height"></div>
+    <div class="container">
+        <h2>content</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat rem, praesentium explicabo dignissimos error reiciendis voluptatibus vel magnam necessitatibus nulla quas possimus at dolorum sint est sapiente dolore, ducimus quasi?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis odio dignissimos repudiandae earum ut tenetur magnam alias accusamus aperiam rem laborum sequi obcaecati cupiditate, autem aut. Odit sequi hic qui?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse in cupiditate amet ullam, culpa quam ex vitae quaerat maiores tempore, vel qui corrupti aliquam atque quia nemo nobis sint? Sapiente.</p>
+
+    </div>
+ <section class="tabs_nav">
+    <div class="container">
+        <ul>
+            <li><a href="javascript:void(0)">HTML</a></li>
+            <li><a href="javascript:void(0)">CSS</a></li>
+            <li><a href="javascript:void(0)"> JavaScript</a></li>
+            <li><a href="javascript:void(0)">Python</a></li>
+            <li><a href="javascript:void(0)">JAVA</a></li>
+        </ul>
+    </div>
+ </section>
+ <div class="tabs_nav_height"></div>
+ <div class="container">
+    <div class="scroll_section">
+        <h2>Wha is HTML?</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti laborum illo voluptate autem dolor velit dolores cum, beatae aspernatur? Sed quas quisquam debitis. Distinctio, suscipit. Consequuntur magnam illo labore quibusdam.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis nobis ducimus vero impedit officiis a! Inventore, in. Distinctio illo tempore dolores corrupti voluptates! Delectus cupiditate possimus ut obcaecati eaque iure.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem quas blanditiis harum esse possimus perferendis quos, animi a assumenda? Quod, exercitationem dicta assumenda sit id sint! Porro autem saepe eligendi!</p>
+        <section id="courses">
+            <div class="featured-course-container">
+                <div class="featured-course-video">
+                    <iframe width="560" height="500" style="padding: 50px;" src=" https://www.youtube.com/embed/hu-q2zYwEYs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> 
+                </div>
+                <div class="featured-course-content">
+                    <div class="small-heading gray">
+                        <span><i class="fa fa-circle yellow"></i></span>
+                       <img src="bullet.png" alt="" style="width:20px ;height: auto;"> Welcome to the  Net Ninja
+                    </div>
+                    <div class="featured-course-title"><h1>getting started with html   for beginners </h1></div>
+                    <div class="featured-course-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, sit, laudantium itaque pariatur hic fugiat, est a vero natus possimus dolorum? Exercitationem quod culpa quidem fugiat, ratione officia quia soluta!</div>
+                     <div class="featured-course-icons-container">
+                        <div class="icons-row">
+                            <div class="icon-heading">
+                                <span><i class="fa fa-check-circle blue"></i></span>
+                                Fundamentals...
+                            </div>
+                            <!--<div class="icon-heading">
+                                <span><i class="fa fa-check-circle blue"></i></span>
+                                oop's concept.
+                            </div>-->
+                            <div class="icon-heading">
+                                <span><i class="fa fa-check-circle blue"></i></span>
+                                 conceptual..
+                            </div>
+                            <div class="icon-heading">
+                                <span><i class="fa fa-check-circle blue"></i></span>
+                                Gamming 
+                            </div>
+                        </div>
+                     </div>
+                </div>
+            </div>
+
+
+    </div>
+    <div class="scroll_section">
+        <h2>Wha is CSS?</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti laborum illo voluptate autem dolor velit dolores cum, beatae aspernatur? Sed quas quisquam debitis. Distinctio, suscipit. Consequuntur magnam illo labore quibusdam.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis nobis ducimus vero impedit officiis a! Inventore, in. Distinctio illo tempore dolores corrupti voluptates! Delectus cupiditate possimus ut obcaecati eaque iure.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem quas blanditiis harum esse possimus perferendis quos, animi a assumenda? Quod, exercitationem dicta assumenda sit id sint! Porro autem saepe eligendi!</p>
+        <section id="courses">
+            <div class="featured-course-container">
+                <div class="featured-course-video">
+                    <iframe width="560" height="500" style="padding: 50px;" src=" https://www.youtube.com/embed/hu-q2zYwEYs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> 
+                </div>
+                <div class="featured-course-content">
+                    <div class="small-heading gray">
+                        <span><i class="fa fa-circle yellow"></i></span>
+                       <img src="bullet.png" alt="" style="width:20px ;height: auto;"> Welcome to the  Net Ninja
+                    </div>
+                    <div class="featured-course-title"><h1>getting started with   Css for beginners </h1></div>
+                    <div class="featured-course-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, sit, laudantium itaque pariatur hic fugiat, est a vero natus possimus dolorum? Exercitationem quod culpa quidem fugiat, ratione officia quia soluta!</div>
+                     <div class="featured-course-icons-container">
+                        <div class="icons-row">
+                            <div class="icon-heading">
+                                <span><i class="fa fa-check-circle blue"></i></span>
+                                Fundamentals...
+                            </div>
+                            <!--<div class="icon-heading">
+                                <span><i class="fa fa-check-circle blue"></i></span>
+                                oop's concept.
+                            </div>-->
+                            <div class="icon-heading">
+                                <span><i class="fa fa-check-circle blue"></i></span>
+                                 conceptual..
+                            </div>
+                            <div class="icon-heading">
+                                <span><i class="fa fa-check-circle blue"></i></span>
+                                Gamming
+                            </div>
+                        </div>
+                     </div>
+                </div>
+            </div>
+
+
+
+    </div>
+    <div class="scroll_section">
+        <h2>Wha is JavaScript?</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti laborum illo voluptate autem dolor velit dolores cum, beatae aspernatur? Sed quas quisquam debitis. Distinctio, suscipit. Consequuntur magnam illo labore quibusdam.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis nobis ducimus vero impedit officiis a! Inventore, in. Distinctio illo tempore dolores corrupti voluptates! Delectus cupiditate possimus ut obcaecati eaque iure.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem quas blanditiis harum esse possimus perferendis quos, animi a assumenda? Quod, exercitationem dicta assumenda sit id sint! Porro autem saepe eligendi!</p>
+        <section id="courses">
+            <div class="featured-course-container">
+                <div class="featured-course-video">
+                    <iframe width="560" height="500" style="padding: 50px;" src=" https://www.youtube.com/embed/hu-q2zYwEYs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> 
+                </div>
+                <div class="featured-course-content">
+                    <div class="small-heading gray">
+                        <span><i class="fa fa-circle yellow"></i></span>
+                       <img src="bullet.png" alt="" style="width:20px ;height: auto;"> Welcome to the  Net Ninja
+                    </div>
+                    <div class="featured-course-title"><h1>getting started with  JavaScript for beginners </h1></div>
+                    <div class="featured-course-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, sit, laudantium itaque pariatur hic fugiat, est a vero natus possimus dolorum? Exercitationem quod culpa quidem fugiat, ratione officia quia soluta!</div>
+                     <div class="featured-course-icons-container">
+                        <div class="icons-row">
+                            <div class="icon-heading">
+                                <span><i class="fa fa-check-circle blue"></i></span>
+                                Fundamentals...
+                            </div>
+                            <!--<div class="icon-heading">
+                                <span><i class="fa fa-check-circle blue"></i></span>
+                                oop's concept.
+                            </div>-->
+                            <div class="icon-heading">
+                                <span><i class="fa fa-check-circle blue"></i></span>
+                                 conceptual..
+                            </div>
+                            <div class="icon-heading">
+                                <span><i class="fa fa-check-circle blue"></i></span>
+                                Gamming 
+                            </div>
+                        </div>
+                     </div>
+                </div>
+            </div>
+
+
+
+    </div>
+    <div class="scroll_section">
+        <h2>Wha is Python?</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti laborum illo voluptate autem dolor velit dolores cum, beatae aspernatur? Sed quas quisquam debitis. Distinctio, suscipit. Consequuntur magnam illo labore quibusdam.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis nobis ducimus vero impedit officiis a! Inventore, in. Distinctio illo tempore dolores corrupti voluptates! Delectus cupiditate possimus ut obcaecati eaque iure.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem quas blanditiis harum esse possimus perferendis quos, animi a assumenda? Quod, exercitationem dicta assumenda sit id sint! Porro autem saepe eligendi!</p>
+        <section id="courses">
+            <div class="featured-course-container">
+                <div class="featured-course-video">
+                    <iframe width="560" height="500" style="padding: 50px;" src=" https://www.youtube.com/embed/hu-q2zYwEYs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> 
+                </div>
+                <div class="featured-course-content">
+                    <div class="small-heading gray">
+                        <span><i class="fa fa-circle yellow"></i></span>
+                       <img src="bullet.png" alt="" style="width:20px ;height: auto;"> Welcome to the  Net Ninja
+                    </div>
+                    <div class="featured-course-title"><h1>getting started with Python for beginners </h1></div>
+                    <div class="featured-course-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, sit, laudantium itaque pariatur hic fugiat, est a vero natus possimus dolorum? Exercitationem quod culpa quidem fugiat, ratione officia quia soluta!</div>
+                     <div class="featured-course-icons-container">
+                        <div class="icons-row">
+                            <div class="icon-heading">
+                                <span><i class="fa fa-check-circle blue"></i></span>
+                                Fundamentals...
+                            </div>
+                            <!--<div class="icon-heading">
+                                <span><i class="fa fa-check-circle blue"></i></span>
+                                oop's concept.
+                            </div>-->
+                            <div class="icon-heading">
+                                <span><i class="fa fa-check-circle blue"></i></span>
+                                 conceptual..
+                            </div>
+                            <div class="icon-heading">
+                                <span><i class="fa fa-check-circle blue"></i></span>
+                                Gamming 
+                            </div>
+                        </div>
+                     </div>
+                </div>
+            </div>
+
+
+
+    </div>
+    <div class="scroll_section">
+        <h2>Wha is JAVA?</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti laborum illo voluptate autem dolor velit dolores cum, beatae aspernatur? Sed quas quisquam debitis. Distinctio, suscipit. Consequuntur magnam illo labore quibusdam.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis nobis ducimus vero impedit officiis a! Inventore, in. Distinctio illo tempore dolores corrupti voluptates! Delectus cupiditate possimus ut obcaecati eaque iure.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem quas blanditiis harum esse possimus perferendis quos, animi a assumenda? Quod, exercitationem dicta assumenda sit id sint! Porro autem saepe eligendi!</p>
+        
+    </div>
+    <section id="courses">
+        <div class="featured-course-container">
+            <div class="featured-course-video">
+                <iframe width="560" height="500" style="padding: 50px;" src=" https://www.youtube.com/embed/hu-q2zYwEYs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> 
+            </div>
+            <div class="featured-course-content">
+                <div class="small-heading gray">
+                    <span><i class="fa fa-circle yellow"></i></span>
+                   <img src="bullet.png" alt="" style="width:20px ;height: auto;"> Welcome to the  Net Ninja
+                </div>
+                <div class="featured-course-title"><h1>getting started with  Java for beginners </h1></div>
+                <div class="featured-course-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, sit, laudantium itaque pariatur hic fugiat, est a vero natus possimus dolorum? Exercitationem quod culpa quidem fugiat, ratione officia quia soluta!</div>
+                 <div class="featured-course-icons-container">
+                    <div class="icons-row">
+                        <div class="icon-heading">
+                            <span><i class="fa fa-check-circle blue"></i></span>
+                            Fundamentals...
+                        </div>
+                        <!--<div class="icon-heading">
+                            <span><i class="fa fa-check-circle blue"></i></span>
+                            oop's concept.
+                        </div>-->
+                        <div class="icon-heading">
+                            <span><i class="fa fa-check-circle blue"></i></span>
+                             conceptual..
+                        </div>
+                        <div class="icon-heading">
+                            <span><i class="fa fa-check-circle blue"></i></span>
+                            Gamming 
+                        </div>
+                    </div>
+                 </div>
+            </div>
+        </div>
+
+
+ </div>
+
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <script type="text/javascript" src="js/script.js"></script>
+
+     <script>
+        var headerHeight = $('header').outerHeight(),
+        tabs_navHeight = $('.tabs_nav').outerHeight(),
+        tabs_navOffsetTop = $('.tabs_nav').offset().top;
+        $('.header_height').css({"height":headerHeight});
+
+        $(window).scroll(function(){
+            if($(window).scrollTop() > tabs_navOffsetTop){
+                $('.tabs_nav').addClass('fixed');
+                $('.tabs_nav').css({"top":headerHeight});
+                $('.tabs_nav_height').css({"height":tabs_navHeight});
+
+            }else{
+                $('.tabs_nav').removeClass('fixed');
+                $('.tab_nav').css({"top":0});
+                $('.tabs_nav_height').css({"height":0});
+            }
+            $('.scroll_section').each(function(index, el){
+                if($(window).scrollTop()> $(this).offset().top - headerHeight - tabs_nav_height - 5){
+                    $('.scroll_section').removeClass('selected');
+                    $(this).addClass('selected');
+                    thisIndex = $(this).addClass('selected').index();
+                    $('.tabs_nav ul li').removeClass('active'); 
+                    $('.tabs_nav ul li').eq(thisindex).addClass('active');
+                }
+            })
+        })
+
+        $('.tabs_nav ul li').click(function(event) {
+            /* Act on the event */
+            var triggerIndex = $(this).index();
+            var triggerIndexOffset = $('.scroll_section').eq(triggerIndex).offset().top;
+            $('.tabs_nav ul li').removeClass('active');
+            $(this).addClass('active');
+            $('body,html').animated({scrollTop:triggerIndexOffset - headerHeight -tabs_navHeight})
+        })
+
+     </script>
+ </body>
+ </html>

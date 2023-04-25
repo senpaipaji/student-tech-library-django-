@@ -1,0 +1,66 @@
+{% extends 'base/library.html' %}
+
+{% load static %}
+{% block link %}
+<link rel="stylesheet" href="{% static 'styles/library.css' %}">
+{% endblock %}
+
+{% block sidebar-content %}
+<div class="sidebar__list">
+    <ul>
+        <li>
+            <a href="/library/books/{{branch}}/{{sem}}" class="">Books</a>
+        </li>
+
+        <li>
+            <a href="/library/pyqs/{{branch}}/{{sem}}" class="active">PYQ</a>
+        </li>
+    </ul>
+</div>
+{% endblock %}
+
+{% block container %}
+<div class="pyq-container">
+
+    {% for pyq in pyqs %}
+    <div class="pyq-precard">
+        <div class="pyq-card">
+            <div class="pyq-header">
+                <h3>
+                    {{pyq.subject}}
+                </h3>
+                <br>
+            </div>
+            <hr>
+            <table>
+                {% for link in pyq.pyqlink_set.all %}
+                <tr>
+                    <td>
+                        <p class="pyq-year">
+                            {{link.year}}
+                        </p>
+                    </td>
+                    <td>
+                        <p class="pyq-year">
+                            {% if link.month is not None %}
+                            ({{link.month}})
+                            {% endif %}
+                        </p>
+                    </td>
+                    <td>
+                        <p class="pyq-link  ">
+                            <a href="{{link.href}}">
+                                <i class="fa fa-file-alt"></i>
+                            </a>
+                        </p>
+                    </td>
+                </tr>
+                {% endfor %}
+
+            </table>
+
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

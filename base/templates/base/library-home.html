@@ -1,0 +1,50 @@
+{% extends 'base/library.html' %}
+
+
+
+{% block container %}
+
+
+<div class="heading">
+</div>
+<div class="content">
+    <div class="about div">
+        <h3>Introduction</h3>
+        <p>Welcome to our online library, where you can find a wide range of resources to support your academic journey.
+            Our library page is a one-stop destination for all the essential materials that you need to succeed in your
+            studies.
+            <br> <br>
+            We understand the importance of having access to quality study materials, and that is why we have compiled a
+            comprehensive collection of books, links, and practice papers related to various academic fields. You can
+            find books ranging from classic literature to contemporary works, textbooks, research papers, and much more.
+            Our library page caters to students of all levels, from primary school to university, and covers various
+            subjects such as science, mathematics, social sciences, and humanities.
+            <br> <br>
+            In addition to books, we have also included links to various online resources that can enhance your learning
+            experience. These links provide access to e-books, online courses, educational videos, and other resources
+            that you can use to supplement your classroom learning. Whether you need help with a particular topic or
+            want to explore new areas of interest, our links section has something for everyone.
+            <br><br>
+            Practice papers are a crucial aspect of preparing for exams, and we have made sure to include a
+            comprehensive collection of them on our library page. These practice papers cover a range of topics and
+            levels, and are an excellent way to test your knowledge and understanding of the subject. You can also use
+            these practice papers to identify your strengths and weaknesses and work on improving your performance.
+            <br><br>
+
+        </p>
+    </div>
+    <div class="div">
+        <h3>Enter Your Details:</h3>
+        <div class="library__forms">
+            <form action="" method="post">
+                {% csrf_token %}
+                {{form.as_p}}
+                <button class="button-filled" type="submit">Lets go!</button>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+
+{% endblock %}

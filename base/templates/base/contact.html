@@ -1,0 +1,64 @@
+{% extends 'main.html' %}
+
+{% load static %}
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'styles/contact.css' %}">
+{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="contact-box">
+        <div class="contact-left">
+            <h3>Sent your request</h3>
+            <form>
+
+                <div class="input-row">
+                    <div class="input-group">
+                        <label>Name</label>
+                        <input type="text" placeholder="John Amendo">
+                    </div>
+                    <div class="input-group">
+                        <label>Phone</label>
+                        <input type="text" placeholder="+91 000 000 0000">
+                    </div>
+
+                </div>
+                <div class="input-row">
+                    <div class="input-group">
+                        <label>Email</label>
+                        <input type="text" placeholder="xyz@gmail.com">
+                    </div>
+                    <div class="input-group">
+                        <label>Subject</label>
+                        <input type="text" placeholder="Enter Query">
+                    </div>
+                    
+                </div>
+
+                 <label> Message</label>
+                 <textarea rows="5" placeholder="Your Message"></textarea>    
+                 <button type="submit" class="button-filled">Send</button>
+            </form>
+        </div>
+        <div class="contact-right">
+            <h3>Reach Us</h3>
+
+            <table>
+                <tr>
+                    <td>Email</td>
+                    <td>contactus@example.com</td>
+                </tr>
+                <tr>
+                    <td>Phone</td>
+                    <td>+91 000 000 0000</td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td> Block-2, Ramnagar<br>
+                        Nashik station</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

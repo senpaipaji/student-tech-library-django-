@@ -1,0 +1,42 @@
+
+<nav class="navbar">
+    <div class="left">
+
+        <i class="logo">OhayoSensie</i>
+        <ul class="nav__list">
+            <li>
+                <a href="/" class="lheader-istitem active">Home</a>
+            </li>
+            <li>
+                <a href="/library/home" class="lheader-listitem">Library</a>
+            </li>
+            <li>
+                <a href="{% url 'courses' %}" class="lheader-listitem">Courses</a>
+            </li>
+            <li>
+                <a href="/contact" class="lheader-listitem">Contact</a>
+            </li>
+        </ul>
+    </div>
+    <div class="right">
+        {% if request.user.is_authenticated %}
+        <button class="login">
+            <a href="{% url 'logout' %}">
+                Log out
+            </a>
+        </button>
+        {% else %}
+        <button class="login">
+            <a href="{% url 'login' %}">
+                Log in
+            </a>
+        </button>
+        <button class="signup">
+            <a href="{% url 'register' %}">
+                Sign up
+            </a>
+        </button>
+        {% endif %}
+    </div>
+</nav>
+

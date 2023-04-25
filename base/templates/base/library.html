@@ -1,0 +1,41 @@
+
+{% extends 'main.html' %}
+
+{% load static %}
+{% block link %}
+    <link rel="stylesheet" href="{% static 'styles/library.css' %}">
+{% endblock %}
+
+
+{% block content %}
+
+
+<div class="sidebar">
+    <h3>
+        Libraries   
+    </h3>
+    {% block sidebar-content %}
+
+    {% endblock %}
+</div>
+
+<div class="container">
+
+    {%  block container %}
+    
+
+    {% endblock %}
+
+</div>
+
+
+{% endblock %}
+
+
+{% block script %}
+<script>
+    document.querySelector('.header-listitem.active').classList.remove('active')
+       
+          a     
+</script>
+{% endblock %}
