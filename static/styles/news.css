@@ -1,0 +1,32 @@
+body{
+    background-color: rgb(222, 222, 222);
+}
+
+.head1{
+    margin-top: 1%;
+    background-color: chocolate;
+    background-size: auto;
+    text-align: center;
+}
+.card{
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    margin: auto;
+    margin-bottom: 2%;
+    position: relative;
+    padding: 1.25rem;
+    width: 80%;
+    color: rgb(0, 0, 0);
+    transition: transform .3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    
+}
+
+.card:hover{
+    transform: scale(1.02);
+    transition: transform .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    animation-duration: 300ms;
+}
+.card:hover{
+    box-shadow: 0 0 11px rgba(0, 0, 0, 0.2); 
+}

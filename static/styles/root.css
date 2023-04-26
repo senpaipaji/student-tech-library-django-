@@ -1,0 +1,50 @@
+:root {
+    --contrasting-color1:rgb(163,51,28);
+    --contrasting-color2:rgb(213,136,88);
+    --body-color0:rgb(20, 20, 23);
+    --body-color1:rgb(28,28,33);
+    --body-color2:rgb(36,36,36);
+    --body-color3:rgb(51,51,51);
+    --body-color4:rgb(31,31,31);
+    --font-color1:rgb(191,191,191);
+    --font-color2:rgb(238,238,238);
+    --font-color-dimmed:rgb(51,51,51);
+    --font-color-dimmed-overlay:rgb(34, 33, 33);
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+h1,
+h2,
+h3{
+    color: var(--font-color2);
+}
+
+body {
+    min-height: 100vh;
+}
+
+.dn{
+    display: none;
+}
+
+.button-filled {
+    font-size: 1.25rem;
+    padding: 10px;
+    background-color: var(--contrasting-color2);
+    color: white;
+    border: none;
+    margin-top: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.button-filled:active {
+
+    transform: scale(.98);
+}

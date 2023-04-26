@@ -1,0 +1,217 @@
+
+body{
+    height: 100vh;
+    margin-left: 20%;
+    margin-top: 80px;
+}
+main{
+    color: var(--font-color1);
+    justify-content: end;
+    min-height: 100vh;
+}
+.sidebar{
+    width: 20%;
+    height: 100%;
+    top: 80px;
+    left: 0;
+    position: fixed;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    border-right: 1px solid var(--font-color1);
+    background-color: var(--body-color1);
+    padding: 1.25rem 0;
+    min-height: 100%;
+}
+.sidebar h3{
+    padding: 1.25rem;
+}
+.sidebar__list{
+    color: var(--font-color2);
+    border-top: 1px solid var(--font-color1) ;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    max-width: 100%;
+    padding: 1.25rem;
+}
+.sidebar__list h3{
+    font-size: 1.15rem;
+    text-transform: uppercase;
+}
+.sidebar__list li{
+    padding: 5px;
+}
+
+.sidebar a{
+    color: var(--font-color1);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-family: inherit;
+}
+
+/* ////////////////////////////// */
+.heading em{
+    font-size: 2rem;
+    font-weight: 300;
+    text-transform: none;
+    color: var(--font-color1);
+    font-style: normal;
+}
+.container{
+    padding: 1.25rem;
+    overflow: hidden;
+    min-height: 100vh;
+    background-color: var(--body-color3);
+}
+.content{
+    padding: 1.25rem;
+}
+.div{
+    margin-bottom: 20px;
+}
+.div  h3{
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    font-weight: 300;
+}
+
+label{
+    display: block;
+}
+.form-input{
+    font-size: 1.15rem;
+    text-transform: lowercase;
+    padding: 10px;
+    border: none;
+    width: 300px ;
+    border: 2px solid var(--contrasting-color2);
+    color: var(--font-color-dimmed);
+    border-radius: 4px;
+    margin: 10px;
+}
+.form-input:focus,
+.form-input:active{
+    outline: none;
+}
+
+/* /////////// */
+
+.library__cards{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-wrap: wrap;
+    line-height: 20px;
+    min-height: 68px;
+}
+.library__cards > .card{
+    box-shadow: rgba(0, 0, 0, 0.541) 0px 3px 8px;
+    color: var(--font-color-dimmed);
+    background-color: var(--font-color2);
+    width: 30%;
+    height: 300px;
+    padding: 1.25rem;
+    border-radius: 10px;
+    margin: 1%;
+    position: relative;
+}
+.library__cards i{
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+.library__cards h3{
+    padding-bottom: 10px;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    height: 60px;
+    color: var(--font-color-dimmed);
+    border-bottom: 1px solid var(--contrasting-color2) ;
+}
+.library__cards p{
+    font-size: 13px;
+    padding-bottom: 10px;    
+    transition: all .3s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+}
+.library__cards a.download__anchor{
+    position: absolute;
+    color: var(--contrasting-color2);
+    text-transform: capitalize;
+    text-decoration: none;
+    font-weight: 600;
+    bottom: 20px;
+    transition: all .2s ;
+}
+.library__cards a.download__anchor:hover{
+    transition: all .3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transform: scale(1.03);
+}
+.links{
+    transition: all .3s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+}
+.links li{
+    list-style:square;
+    padding: 5px;    
+} 
+.links li a{
+    letter-spacing: normal;
+    text-transform: capitalize;
+    color: var(--contrasting-color2);
+    font-size: 15px;
+}
+.links li a:hover{
+    text-decoration: underline;
+    transition: 3s ease-in-out;
+    transition-property: text-decoration;
+}
+
+/* ////////////////////////// */
+
+
+.pyq-container{
+    padding: 1.25rem;
+    height: 100vh;
+    background-color: var(--body-color3);
+}
+.pyq-precard{
+    padding: 10px;
+    background-color: var(--font-color2);
+    width: 90%;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.94) 0px 3px 8px;
+    transition: transform .2s ease;
+
+}
+.pyq-card{
+
+    border: 2px solid var(--contrasting-color2);
+    padding: 1.25rem;
+    border-radius: 4px;
+}
+.pyq-header > h3{
+    color: var(--body-color3);
+    font-size: 2rem;
+    font-weight: 500;
+}
+.pyq-card > table {
+    min-height: 100px;
+    color: var(--body-color4);
+    margin-top: 20px;
+}
+.pyq-year{
+    height: 60px;
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+.pyq-link{
+    height: 60px;
+    font-size: 1.25rem;
+    font-weight: 500; 
+}
+.pyq-link > a{
+    color: var(--contrasting-color1);
+}
